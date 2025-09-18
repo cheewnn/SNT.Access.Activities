@@ -1,0 +1,14 @@
+{
+  "resourceManagerName": "SNT.Access.Activities.Resources.Resources",
+  "activities": [
+    {
+      "fullName": "SNT.Access.Activities.QueryAccessDB",
+      "shortName": "Query AccessDB",
+      "displayNameKey": "QueryAccess_Activity_DisplayName",
+      "descriptionKey": "QueryAccess_Activity_Description",
+      "categoryKey": "SNT.Access",
+      "iconKey": "data-searching.png",
+      "viewModelType": "SNT.Access.Activities.ViewModels.AccessActivitiesViewModel"
+    }
+  ]
+}

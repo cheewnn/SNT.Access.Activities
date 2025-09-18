@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<VersionBuild>$([System.DateTime]::UtcNow.DayOfYear.ToString("F0"))</VersionBuild>
+		<VersionRevision>$([System.DateTime]::UtcNow.TimeOfDay.TotalMinutes.ToString("F0"))</VersionRevision>
+		<PackageId>SNT.Access.Activities</PackageId>
+		<VersionPrefix Condition="'$(Configuration)' == 'Release'">1.0.1</VersionPrefix>
+		<VersionPrefix Condition="'$(Configuration)' == 'Debug'">1.0.$(VersionBuild)-dev.$(VersionRevision)</VersionPrefix>
+		<Authors>LEE Chee Wan</Authors>
+		<PackageTags>UiPathActivities</PackageTags>
+		<PackageTags>Access Database</PackageTags>
+		<Product>SNT.Access.Activities.Packaging</Product>
+		<PackageOutputPath>..\Output\Activities\Packages\</PackageOutputPath>
+		<TargetsForTfmSpecificBuildOutput>AddDlls</TargetsForTfmSpecificBuildOutput>
+		<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+	</PropertyGroup>
+
+	<Target Name="AddDlls">
+		<!-- PDBs for debug-->
+		<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+			<BuildOutputInPackage Include="$(OutputPath)SNT.Access.Activities.pdb" />
+		</ItemGroup>
+		<ItemGroup>
+			<BuildOutputInPackage Include="$(OutputPath)SNT.Access.Activities.dll" />
+		</ItemGroup>
+	</Target>
+
+	<Target Name="RemoveMetaDll" AfterTargets="BuiltProjectOutputGroup">
+		<ItemGroup>
+			<BuiltProjectOutputGroupOutput Remove="@(BuiltProjectOutputGroupOutput)" />
+		</ItemGroup>
+	</Target>
+	
+	<Target Name="CleanPackageFiles" BeforeTargets="Build">
+		<Message Text="Deleting packages ..." />
+		<ItemGroup>
+			<PackageFilesToDelete Include="$(PackageOutputPath)\$(PackageId)*.nupkg" />
+		</ItemGroup>
+		<Delete Files="@(PackageFilesToDelete)" ContinueOnError="WarnAndContinue" />
+	</Target>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\SNT.Access.Activities\SNT.Access.Activities.csproj">
+			<PrivateAssets>All</PrivateAssets>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

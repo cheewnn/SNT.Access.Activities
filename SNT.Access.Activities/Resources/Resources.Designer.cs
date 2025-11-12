@@ -79,6 +79,24 @@ namespace SNT.Access.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Closes and disposes AccessSession.
+        /// </summary>
+        public static string CloseAccess_Activity_Description {
+            get {
+                return ResourceManager.GetString("CloseAccess_Activity_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close Access Session.
+        /// </summary>
+        public static string CloseAccess_Activity_DisplayName {
+            get {
+                return ResourceManager.GetString("CloseAccess_Activity_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Output Table.
         /// </summary>
         public static string DtOut_DisplayName {
@@ -93,6 +111,42 @@ namespace SNT.Access.Activities {
         public static string DtOut_Tooltip {
             get {
                 return ResourceManager.GetString("DtOut_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executes SQL query on Access Session object.
+        /// </summary>
+        public static string ExecuteAccessQuery_Activity_Description {
+            get {
+                return ResourceManager.GetString("ExecuteAccessQuery_Activity_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Execute Access Query.
+        /// </summary>
+        public static string ExecuteAccessQuery_Activity_DisplayName {
+            get {
+                return ResourceManager.GetString("ExecuteAccessQuery_Activity_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Returns Access Session to be used to query. Remember to dispose when Close session once done.
+        /// </summary>
+        public static string OpenAccess_Activity_Description {
+            get {
+                return ResourceManager.GetString("OpenAccess_Activity_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Access Session.
+        /// </summary>
+        public static string OpenAccess_Activity_DisplayName {
+            get {
+                return ResourceManager.GetString("OpenAccess_Activity_DisplayName", resourceCulture);
             }
         }
         
@@ -138,6 +192,24 @@ namespace SNT.Access.Activities {
         public static string RowsAffected_Tooltip {
             get {
                 return ResourceManager.GetString("RowsAffected_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access DB Session object.
+        /// </summary>
+        public static string Session_DisplayName {
+            get {
+                return ResourceManager.GetString("Session_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access DB Session object.
+        /// </summary>
+        public static string Session_Tooltip {
+            get {
+                return ResourceManager.GetString("Session_Tooltip", resourceCulture);
             }
         }
         

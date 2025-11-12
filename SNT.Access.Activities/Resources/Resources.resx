@@ -161,4 +161,36 @@
     <value>SNT.Access</value>
     <comment>Activity Category</comment>
   </data>
+  <data name="OpenAccess_Activity_DisplayName" xml:space="preserve">
+    <value>Open Access Session</value>
+    <comment>Activity Name</comment>
+  </data>
+  <data name="OpenAccess_Activity_Description" xml:space="preserve">
+    <value>Returns Access Session to be used to query. Remember to dispose when Close session once done</value>
+    <comment>Activity Description</comment>
+  </data>
+  <data name="Session_DisplayName" xml:space="preserve">
+    <value>Access DB Session object</value>
+    <comment>Property Name</comment>
+  </data>
+  <data name="Session_Tooltip" xml:space="preserve">
+    <value>Access DB Session object</value>
+    <comment>Property Description</comment>
+  </data>
+  <data name="CloseAccess_Activity_DisplayName" xml:space="preserve">
+    <value>Close Access Session</value>
+    <comment>Activity Name</comment>
+  </data>
+  <data name="CloseAccess_Activity_Description" xml:space="preserve">
+    <value>Closes and disposes AccessSession</value>
+    <comment>Activity Description</comment>
+  </data>
+  <data name="ExecuteAccessQuery_Activity_DisplayName" xml:space="preserve">
+    <value>Execute Access Query</value>
+    <comment>Activity Name</comment>
+  </data>
+  <data name="ExecuteAccessQuery_Activity_Description" xml:space="preserve">
+    <value>Executes SQL query on Access Session object</value>
+    <comment>Activity Description</comment>
+  </data>
 </root>

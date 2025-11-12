@@ -9,6 +9,33 @@
       "categoryKey": "SNT.Access",
       "iconKey": "data-searching.png",
       "viewModelType": "SNT.Access.Activities.ViewModels.AccessActivitiesViewModel"
+    },
+    {
+      "fullName": "SNT.Access.Activities.OpenAccessDB",
+      "shortName": "Open Access Session",
+      "displayNameKey": "OpenAccess_Activity_DisplayName",
+      "descriptionKey": "OpenAccess_Activity_Description",
+      "categoryKey": "SNT.Access",
+      "iconKey": "data-searching.png",
+      "viewModelType": "SNT.Access.Activities.ViewModels.OpenAccessViewModel"
+    },
+    {
+      "fullName": "SNT.Access.Activities.ExecuteAccessQuery",
+      "shortName": "Execute Query AccessSession",
+      "displayNameKey": "ExecuteAccessQuery_Activity_DisplayName",
+      "descriptionKey": "ExecuteAccessQuery_Activity_Description",
+      "categoryKey": "SNT.Access",
+      "iconKey": "data-searching.png",
+      "viewModelType": "SNT.Access.Activities.ViewModels.ExecuteAccessQueryViewModel"
+    },
+    {
+      "fullName": "SNT.Access.Activities.CloseAccessDB",
+      "shortName": "Close Access Session",
+      "displayNameKey": "CloseAccess_Activity_DisplayName",
+      "descriptionKey": "CloseAccess_Activity_Description",
+      "categoryKey": "SNT.Access",
+      "iconKey": "data-searching.png",
+      "viewModelType": "SNT.Access.Activities.ViewModels.CloseAccessViewModel"
     }
   ]
 }
